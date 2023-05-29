@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encripta2</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+
+  <body class="fondo-general">
+    <header>
+      <div>
+        <img src="assets/logocabecera.jpg" class="logo" alt="Logo" />
+        <h1>Críptico</h1>
+      </div>
+    </header>
+    <main>
+      <div class="contenedor-principal">
+        <section class="caja-formulario">
+          <form>
+            <textarea
+              cols="70"
+              rows="10"
+              id="textoIngresado"
+              class="cajadetexto"
+              required
+            >
+Ingresa el texto aquí</textarea
+            >
+            <div class="caja-alerta">
+              <legend class="textoalerta">
+                Utiliza letras minúsculas y sin acentos
+              </legend>
+            </div>
+            <div class="botonera">
+              <ul>
+                <li>
+                  <input
+                    type="button"
+                    id="encriptar"
+                    class="boton"
+                    value="🔒 Encriptar"
+                  />
+                </li>
+                <li>
+                  <input
+                    type="button"
+                    id="desencriptar"
+                    class="boton"
+                    value="🔓 Desencriptar"
+                  />
+                </li>
+              </ul>
+            </div>
+          </form>
+        </section>
+        <section class="caja-resultado">
+          <section class="mensaje-resultado" id="mensaje-vacio">
+            <img src="assets/personaje.jpg" alt="personaje" class="personaje" />
+            <h2>Aquí aparece tu mensaje!</h2>
+            <p>Ingresa el texto que desee encriptar o desencriptar.</p>
+          </section>
+          <section class="mensaje-resultado" id="mensaje-procesado">
+            <div id="tipoDeResultado"><h2>Hola</h2></div>
+            <div id="impresionResultado"></div>
+            <input type="button" id="copiar" class="boton" value="📋 Copiar" />
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <script src="scripts/encripta2.js"></script>
+  </body>
+</html>
